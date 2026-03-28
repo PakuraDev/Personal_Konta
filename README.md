@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Kroma Startpage</h1>
-  <img src="Kroma Startpage.png" width="100%" />
+  <img src="konta.png" width="100%" />
 </div>
 
 ---
