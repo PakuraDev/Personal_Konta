@@ -84,8 +84,8 @@ export default {
           const start = url.searchParams.get("start");
           const end = url.searchParams.get("end");
           const gastos = await env.DB.prepare(
-            "SELECT * FROM Gastos WHERE usuario = ? AND timestamp BETWEEN ? AND ? ORDER BY timestamp DESC"
-          ).bind(miUsuario, start, end).all();
+            "SELECT * FROM Gastos WHERE timestamp BETWEEN ? AND ? ORDER BY timestamp DESC"
+          ).bind(start, end).all();
           
           // Ya no mapeamos a inglés, devolvemos el resultado puro de D1 (que ya usa concepto/precio)
           const gastosRes = gastos.results.map(g => ({ ...g, username: g.usuario }));

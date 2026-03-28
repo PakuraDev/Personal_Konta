@@ -284,8 +284,22 @@ button:disabled {
     flex: 1;
     align-self: stretch;
     width: 100%;
-    overflow-y: auto; /* Permite hacer scroll si hay muchos gastos */
-    padding-bottom: 96px; /* Espacio extra para que el botón flotante no tape el último gasto */
+    overflow-y: auto; /* Permite hacer scroll */
+    
+    /* LA CLAVE: Permite que el contenedor respete el límite de la pantalla y active el scroll */
+    min-height: 0; 
+    
+    /* Nota: Hemos quitado el padding-bottom de 96px de aquí */
+}
+
+/* TRUCO PARA EL HUECO DEL BOTÓN FLOTANTE: 
+   Esto crea un bloque invisible al final de la lista de gastos para que el botón no tape el último elemento */
+.contenido-principal::after {
+    content: "";
+    display: block;
+    min-height: 96px; /* El espacio extra que antes tenías en el padding */
+    width: 100%;
+    flex-shrink: 0; /* Evita que Flexbox aplaste este hueco */
 }
 
 .dia-bloque {
