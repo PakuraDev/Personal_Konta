@@ -1,7 +1,6 @@
-const CACHE_NAME = 'konta-v2-cache-v2';
+const CACHE_NAME = 'konta-v2-cache-v3';
 const ASSETS = [
   './',
-  './index.html',
   './css/main.css',
   './css/components.css',
   './js/app.js',
@@ -53,7 +52,7 @@ self.addEventListener('fetch', event => {
         });
 
         // ✅ LA LÍNEA SALVAVIDAS: 
-        // "Devuelve lo que hay en caché. Si la caché está vacía, devuelve la promesa de la red."
+        // Devuelve caché si existe, si no, espera a la red.
         return cachedResponse || fetchPromise;
       })
     );

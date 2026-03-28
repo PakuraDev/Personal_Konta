@@ -2,7 +2,7 @@
   "name": "Konta v2",
   "short_name": "Konta",
   "description": "Tu gestor de gastos semanal premium",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0DB3F1",
   "theme_color": "#0DB3F1",
