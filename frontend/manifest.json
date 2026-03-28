@@ -1,0 +1,22 @@
+{
+  "name": "Konta v2",
+  "short_name": "Konta",
+  "description": "Tu gestor de gastos semanal premium",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0DB3F1",
+  "theme_color": "#0DB3F1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

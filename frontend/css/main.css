@@ -1,0 +1,128 @@
+/* =========================================
+   1. FUENTES LOCALES (Versiones Variables Porque Sino Me Revientan Las Cookies En La Cara)
+   ========================================= */
+@font-face {
+    font-family: 'Lexend';
+    src: url('../assets/fonts/Lexend-Variable.ttf') format('truetype');
+    font-weight: 100 900; /* Rango de la fuente variable */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../assets/fonts/PlusJakartaSans-Variable.ttf') format('truetype');
+    font-weight: 200 800; /* Rango de la fuente variable */
+    font-display: swap;
+}
+
+/* =========================================
+   2. VARIABLES (Tokens de Diseño)
+   ========================================= */
+:root {
+    /* Colores Base */
+    --blanco: #FFFFFF;
+    --celeste: #0DB3F1;
+    --negro-suave: #1A1A1A;
+
+    /* Mapeo de Colores - Modo Normal */
+    --bg-app: var(--celeste);
+    --text-primary: var(--blanco);
+    --bg-card: var(--blanco);
+    --text-card: var(--celeste);
+}
+
+/* Mapeo de Colores - Modo Alto Contraste */
+[data-theme="high-contrast"] {
+    /* El fondo RECIÉN DICE EL README que se mantiene igual (azul o blanco) */
+    --text-primary: var(--negro-suave); /* Texto blanco sobre azul -> Negro suave */
+    --text-card: var(--negro-suave);    /* Texto celeste sobre blanco -> Negro suave */
+}
+
+/* =========================================
+   3. RESETEO GLOBAL
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   4. SISTEMA TIPOGRÁFICO
+   ========================================= */
+.h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.p-large {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.p-base {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.p-button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.p-caption {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* =========================================
+   5. UTILIDADES BÁSICAS
+   ========================================= */
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+input {
+    font-family: inherit;
+}
+.text-celeste {
+    color: var(--celeste);
+}
+
+.btn-text-white {
+    color: var(--blanco);
+}
+
+[data-theme="high-contrast"] .text-celeste,
+[data-theme="high-contrast"] .btn-text-white {
+    color: var(--negro-suave);
+}
