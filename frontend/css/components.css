@@ -51,11 +51,12 @@ button:disabled {
     align-items: flex-start;
     background-color: var(--celeste);
     width: 100%;       /* Ocupa el ancho completo en móvil */
-    min-height: 100vh;  
+    height: 100dvh;    /* Bloqueado a la altura del dispositivo */
     max-width: 480px;   /* Un ancho de 'iPhone Pro Max' aprox para que no se vea infinito en PC */
     margin: 0 auto;     
     box-shadow: 0 0 50px rgba(0,0,0,0.1); /* Toque premium en escritorio */
-    overflow-x: hidden; /* Evita scroll horizontal raro */
+    overflow: hidden;   /* El scroll lo manejan los hijos */
+    position: relative; /* Crítico para el botón flotante */
 }
 
 /* Modo Alto Contraste - El fondo se mantiene celeste */
@@ -88,9 +89,10 @@ button:disabled {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    flex: 1 0 0; /* Ocupa el espacio vertical restante */
+    flex: 1; /* Ocupa el espacio vertical restante */
     align-self: stretch; /* Se estira en su padre */
     width: 100%; /* Aseguramos responsive */
+    overflow-y: auto; /* Permite scroll interno si el form es largo */
 }
 
 /* * FILL DEL SUBRAYADO (Punto 2): 
@@ -219,9 +221,7 @@ button:disabled {
    ========================================= */
 
 /* Para que el botón flotante y modales se posicionen bien dentro del "móvil" */
-.pantalla-container {
-    position: relative; /* CRÍTICO para los elementos absolutos/modales */
-}
+/* Eliminamos la redundancia ya declarada arriba */
 
 /* Header del Dashboard */
 .header-dash {
@@ -281,11 +281,11 @@ button:disabled {
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
-    flex: 1 0 0;
+    flex: 1;
     align-self: stretch;
     width: 100%;
     overflow-y: auto; /* Permite hacer scroll si hay muchos gastos */
-    padding-bottom: 100px; /* Espacio extra para que el botón flotante no tape el último gasto */
+    padding-bottom: 96px; /* Espacio extra para que el botón flotante no tape el último gasto */
 }
 
 .dia-bloque {
