@@ -9,7 +9,7 @@
 
 Figma: https://www.figma.com/design/whzvUpnmXPRucAcqazPn2m/Konta-V2?node-id=0-1&t=PSkuYnStfNZ6JBZq-1
 
-Página: https://personal-kroma.pages.dev/
+Página: https://personal-konta.pages.dev/
 
 ---
 
