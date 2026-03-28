@@ -6,7 +6,8 @@ export default {
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, X-Device-Token"
+      "Access-Control-Allow-Headers": "Content-Type, X-Device-Token",
+      "Cache-Control": "no-store, no-cache, must-revalidate"
     };
 
     if (request.method === "OPTIONS") {
